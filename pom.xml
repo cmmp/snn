@@ -1,101 +1,119 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>br.fapesp.snn</groupId>
-    <artifactId>snncluster</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+	<groupId>br.fapesp.snn</groupId>
+	<artifactId>snncluster</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-    <name>snncluster</name>
-    <url>http://maven.apache.org</url>
+	<name>snncluster</name>
+	<url>http://maven.apache.org</url>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
+	<repositories>
+		<repository>
+			<id>my</id>
+			<url>file://${basedir}\lib</url>
+		</repository>
+	</repositories>
 
-        <dependency>
-            <groupId>org.la4j</groupId>
-            <artifactId>la4j</artifactId>
-            <version>0.5.5</version>
-        </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>net.sf.javaml</groupId>
-            <artifactId>javaml</artifactId>
-            <version>0.1.7</version>
-            <scope>system</scope>
-            <systemPath>C:/Users/Cássio/tools/javaml-0.1.7/javaml-0.1.7.jar</systemPath>
-        </dependency>
+		<dependency>
+			<groupId>org.la4j</groupId>
+			<artifactId>la4j</artifactId>
+			<version>0.5.5</version>
+		</dependency>
 
-        <dependency>
-            <groupId>ajt</groupId>
-            <artifactId>ajt</artifactId>
-            <version>2.9</version>
-            <scope>system</scope>
-            <systemPath>C:/Users/Cássio/tools/javaml-0.1.7/lib/ajt-2.9.jar</systemPath>
-        </dependency>
+		<dependency>
+			<groupId>javaml</groupId>
+			<artifactId>javaml</artifactId>
+			<version>0.1.7</version>
+		</dependency>
 
-        <dependency>
-            <groupId>commons</groupId>
-            <artifactId>math</artifactId>
-            <version>1.2</version>
-            <scope>system</scope>
-            <systemPath>C:/Users/Cássio/tools/javaml-0.1.7/lib/commons-math-1.2.jar</systemPath>
-        </dependency>
+		<dependency>
+			<groupId>ajt</groupId>
+			<artifactId>ajt</artifactId>
+			<version>2.9</version>
+		</dependency>
 
-        <dependency>
-            <groupId>jama</groupId>
-            <artifactId>jama</artifactId>
-            <version>1.0.2</version>
-            <scope>system</scope>
-            <systemPath>C:/Users/Cássio/tools/javaml-0.1.7/lib/Jama-1.0.2.jar</systemPath>
-        </dependency>
+		<dependency>
+			<groupId>commons</groupId>
+			<artifactId>math</artifactId>
+			<version>1.2</version>
+		</dependency>
 
-        <dependency>
-            <groupId>libsvm</groupId>
-            <artifactId>libsvm</artifactId>
-            <version>0.0</version>
-            <scope>system</scope>
-            <systemPath>C:/Users/Cássio/tools/javaml-0.1.7/lib/libsvm.jar</systemPath>
-        </dependency>
+		<dependency>
+			<groupId>jama</groupId>
+			<artifactId>jama</artifactId>
+			<version>1.0.2</version>
+		</dependency>
 
-<!--         <dependency> -->
-<!--             <groupId>nz.ac.waikato.cms.weka</groupId> -->
-<!--             <artifactId>weka-dev</artifactId> -->
-<!--             <version>3.7.12</version> -->
-<!--         </dependency> -->
+		<dependency>
+			<groupId>libsvm</groupId>
+			<artifactId>libsvm</artifactId>
+			<version>0.0</version>
+		</dependency>
 
-<!--         <dependency> -->
-<!--             <groupId>org.jfree</groupId> -->
-<!--             <artifactId>jfreechart</artifactId> -->
-<!--             <version>1.0.19</version> -->
-<!--         </dependency> -->
-        
-<!--             <dependency> -->
-<!--             <groupId>br.fapesp.myutils</groupId> -->
-<!--             <artifactId>myutils</artifactId> -->
-<!--             <version>1.0-SNAPSHOT</version> -->
-<!--         </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>nz.ac.waikato.cms.weka</groupId> -->
+		<!-- <artifactId>weka-dev</artifactId> -->
+		<!-- <version>3.7.12</version> -->
+		<!-- </dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.jfree</groupId> -->
+		<!-- <artifactId>jfreechart</artifactId> -->
+		<!-- <version>1.0.19</version> -->
+		<!-- </dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>br.fapesp.myutils</groupId> -->
+		<!-- <artifactId>myutils</artifactId> -->
+		<!-- <version>1.0-SNAPSHOT</version> -->
+		<!-- </dependency> -->
 
 
 
-        <dependency>
-        <groupId>weka</groupId>
-        <artifactId>weka</artifactId>
-        <version>0.0</version>
-        <scope>system</scope>
-        <systemPath>C:/Users/Cássio/tools/javaml-0.1.7/lib/weka.jar</systemPath>
-        </dependency>
+		<dependency>
+			<groupId>weka</groupId>
+			<artifactId>weka</artifactId>
+			<version>0.0</version>
+		</dependency>
 
-    </dependencies>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.5</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
